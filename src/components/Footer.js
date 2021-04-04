@@ -22,12 +22,13 @@ const Wrapper = styled.footer`
   text-align: center;
   span {
     color: var(--clr-primary-5);
+    font-weight: 300;
   }
   h5 {
     color: var(--clr-white);
     margin: 0.1rem;
 
-    font-weight: 400;
+    font-weight: 100;
     text-transform: none;
     line-height: 1.25;
   }
