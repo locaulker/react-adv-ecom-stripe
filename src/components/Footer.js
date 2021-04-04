@@ -1,7 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
+
 const Footer = () => {
-  return <h4>footer</h4>
+  return (
+    <Wrapper>
+      <h5>&copy; {new Date().getFullYear()}</h5>
+      <span>CreativeDev, LLC</span>
+      <span style={{ color: "white" }}>&nbsp;&ndash;&nbsp;</span>
+      <h5>All Rights Reserved</h5>
+    </Wrapper>
+  )
 }
 
 const Wrapper = styled.footer`
