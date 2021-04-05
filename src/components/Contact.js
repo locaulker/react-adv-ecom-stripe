@@ -1,8 +1,33 @@
-import React from 'react'
-import styled from 'styled-components'
+import React from "react"
+import styled from "styled-components"
 
 const Contact = () => {
-  return <h4>contact section</h4>
+  return (
+    <Wrapper>
+      <div className="section-center">
+        <h3>
+          Join Our Newsletter - <em>get 20% off</em>
+        </h3>
+        <div className="content">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum sunt
+            optio nisi, laudantium alias aspernatur minima fugit exercitationem
+            aliquid? Animi.
+          </p>
+          <form className="contact-form">
+            <input
+              type="email"
+              className="form-input"
+              placeholder="Enter your eMail"
+            />
+            <button type="submit" className="submit-btn">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </Wrapper>
+  )
 }
 const Wrapper = styled.section`
   padding: 5rem 0;
@@ -24,12 +49,12 @@ const Wrapper = styled.section`
   .form-input,
   .submit-btn {
     font-size: 1rem;
-    padding: 0.5rem 1rem;
-    border: 2px solid var(--clr-black);
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--clr-grey-5);
   }
   .form-input {
     border-right: none;
-    color: var(--clr-grey-3);
+    color: var(--clr-grey-5);
     border-top-left-radius: var(--radius);
     border-bottom-left-radius: var(--radius);
   }
@@ -43,7 +68,7 @@ const Wrapper = styled.section`
   }
   .submit-btn {
     background: var(--clr-primary-5);
-    text-transform: capitalize;
+    text-transform: uppercase;
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
