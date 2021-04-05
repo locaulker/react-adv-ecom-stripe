@@ -144,6 +144,11 @@ p {
   max-width: var(--max-width);
 }
 
+article h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;

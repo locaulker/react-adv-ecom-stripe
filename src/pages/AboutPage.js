@@ -1,10 +1,29 @@
-import React from 'react'
-import styled from 'styled-components'
-import { PageHero } from '../components'
-import aboutImg from '../assets/hero-bcg.jpeg'
+import React from "react"
+import styled from "styled-components"
+import { PageHero } from "../components"
+import aboutImg from "../assets/hero-bcg.jpeg"
 
 const AboutPage = () => {
-  return <h4>about page</h4>
+  return (
+    <main>
+      <PageHero title="About" />
+      <Wrapper className="page section section-center">
+        <img src={aboutImg} alt="About Image" />
+        <article>
+          <div className="title">
+            <h2>Our Story</h2>
+            <div className="underline"></div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+            quod. Voluptas vel molestias delectus corrupti. Similique quaerat
+            reiciendis quibusdam, officia, perferendis nobis dignissimos quia
+            omnis aliquam id obcaecati inventore ab.
+          </p>
+        </article>
+      </Wrapper>
+    </main>
+  )
 }
 
 const Wrapper = styled.section`
