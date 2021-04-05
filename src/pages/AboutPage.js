@@ -18,6 +18,14 @@ const AboutPage = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
             quod. Voluptas vel molestias delectus corrupti. Similique quaerat
             reiciendis quibusdam, officia, perferendis nobis dignissimos quia
+            omnis aliquam id obcaecati inventore ab. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Velit eum architecto delectus sapiente
+            fuga fugit fugiat dignissimos molestiae quae esse.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae,
+            quod. Voluptas vel molestias delectus corrupti. Similique quaerat
+            reiciendis quibusdam, officia, perferendis nobis dignissimos quia
             omnis aliquam id obcaecati inventore ab.
           </p>
         </article>
