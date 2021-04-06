@@ -39,6 +39,11 @@ const Wrapper = styled.section`
   h4 {
     color: var(--clr-primary-1);
   }
+  h4 {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
   padding: 5rem 0;
 
   background: var(--clr-primary-10);

@@ -6,7 +6,10 @@ const Contact = () => {
     <Wrapper>
       <div className="section-center">
         <h3>
-          Join Our Newsletter - <em>get 20% off</em>
+          Join Our Newsletter -{" "}
+          <em>
+            get <span style={{ fontWeight: "400", color: "red" }}>20%</span> off
+          </em>
         </h3>
         <div className="content">
           <p>
@@ -22,7 +25,7 @@ const Contact = () => {
             <input
               type="email"
               className="form-input"
-              placeholder="Enter your eMail"
+              placeholder="enter your email"
               name="_replyto"
             />
             <button type="submit" className="submit-btn">
@@ -34,10 +37,13 @@ const Contact = () => {
     </Wrapper>
   )
 }
+
 const Wrapper = styled.section`
   padding: 5rem 0;
+  background: #f5f5f5;
   h3 {
     text-transform: none;
+    font-weight: 300;
   }
   p {
     line-height: 2;
@@ -68,8 +74,10 @@ const Wrapper = styled.section`
     border-bottom-right-radius: var(--radius);
   }
   .form-input::placeholder {
-    color: var(--clr-black);
-    text-transform: capitalize;
+    /* color: var(--clr-black); */
+    /* text-transform: capitalize; */
+    font-style: italic;
+    color: #adacac;
   }
   .submit-btn {
     background: var(--clr-primary-5);
@@ -77,10 +85,10 @@ const Wrapper = styled.section`
     letter-spacing: var(--spacing);
     cursor: pointer;
     transition: var(--transition);
-    color: var(--clr-black);
+    color: var(--clr-white);
   }
   .submit-btn:hover {
-    color: var(--clr-white);
+    color: var(--clr-grey-9);
   }
   @media (min-width: 992px) {
     .content {
