@@ -6,7 +6,7 @@ import {
   GET_PRODUCTS_ERROR,
   GET_SINGLE_PRODUCT_BEGIN,
   GET_SINGLE_PRODUCT_SUCCESS,
-  GET_SINGLE_PRODUCT_ERROR
+  GET_SINGLE_PRODUCT_ERROR,
 } from "../actions"
 
 // products reducers
@@ -21,11 +21,10 @@ const products_reducer = (state, action) => {
     return { ...state, isSidebarOpen: false }
   }
 
-  // get products
+  // get all products
   if (action.type === GET_PRODUCTS_BEGIN) {
     return { ...state, products_loading: true }
   }
-
   // products accessed successfully
   if (action.type === GET_PRODUCTS_SUCCESS) {
     const featured_products = action.payload.filter(
@@ -35,13 +34,36 @@ const products_reducer = (state, action) => {
       ...state,
       products_loading: false,
       products: action.payload,
-      featured_products
+      featured_products,
     }
   }
 
-  // errors
+  // get single product
+  if (action.type === GET_SINGLE_PRODUCT_BEGIN) {
+    return {
+      ...state,
+      single_product_loading: true,
+      single_product_error: false,
+    }
+  }
+  if (action.type === GET_SINGLE_PRODUCT_SUCCESS) {
+    return {
+      ...state,
+      single_product_loading: false,
+      single_product: action.payload,
+    }
+  }
+
+  // errors generated
   if (action.type === GET_PRODUCTS_ERROR) {
     return { ...state, products_loading: false, products_error: true }
+  }
+  if (action.type === GET_SINGLE_PRODUCT_ERROR) {
+    return {
+      ...state,
+      single_product_loading: false,
+      single_product_error: true,
+    }
   }
 
   // throw errors
