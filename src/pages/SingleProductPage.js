@@ -83,7 +83,7 @@ const SingleProductPage = () => {
               {company}
             </p>
             <hr />
-            {stock > 0 && <AddToCart />}
+            {stock > 0 && <AddToCart product={product} />}
           </section>
         </div>
       </div>
@@ -118,10 +118,6 @@ const Wrapper = styled.main`
       font-weight: 700;
     }
   }
-  /* .btn {
-    padding: 15px 20px;
-    font-size: 16px;
-  } */
 
   @media (min-width: 992px) {
     .product-center {
