@@ -67,7 +67,7 @@ const SingleProductPage = () => {
           <section className="content">
             <ProductImages images={images} />
             <h2>{name}</h2>
-            <Stars />
+            <Stars stars={stars} reviews={reviews} />
             <h5 className="price">{formatPrice(price)}</h5>
             <p className="desc">{description}</p>
             <p className="info">
@@ -75,7 +75,7 @@ const SingleProductPage = () => {
               {stock > 0 ? "In stock" : "Out of stock"}
             </p>
             <p className="info">
-              <span>SKU: </span>
+              <span className="sku">SKU: </span>
               {sku}
             </p>
             <p className="info">
@@ -96,6 +96,11 @@ const Wrapper = styled.main`
     display: grid;
     gap: 4rem;
     margin-top: 2rem;
+  }
+  h2 {
+    text-transform: capitalize;
+    font-weight: 400;
+    font-size: 20px;
   }
   .price {
     color: var(--clr-primary-5);
