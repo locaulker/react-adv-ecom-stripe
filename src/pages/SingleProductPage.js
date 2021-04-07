@@ -9,7 +9,7 @@ import {
   ProductImages,
   AddToCart,
   Stars,
-  PageHero,
+  PageHero
 } from "../components"
 import styled from "styled-components"
 import { Link } from "react-router-dom"
@@ -21,7 +21,7 @@ const SingleProductPage = () => {
     single_product_loading: loading,
     single_product_error: error,
     single_product: product,
-    fetchSingleProduct,
+    fetchSingleProduct
   } = useProductsContext()
 
   useEffect(() => {
@@ -53,8 +53,9 @@ const SingleProductPage = () => {
     reviews,
     id: sku,
     company,
-    images,
+    images
   } = product
+
   return (
     <Wrapper>
       <PageHero title={name} product />
@@ -63,8 +64,8 @@ const SingleProductPage = () => {
           Back to Products
         </Link>
         <div className="product-center">
-          <ProductImages />
           <section className="content">
+            <ProductImages images={images} />
             <h2>{name}</h2>
             <Stars />
             <h5 className="price">{formatPrice(price)}</h5>
