@@ -1,6 +1,25 @@
 {
-  "cSpell.words": [
-    "ecom"
-  ],
-  "editor.linkedEditing": true
+  "workbench.colorTheme": "SynthWave '84",
+  "workbench.iconTheme": "material-icon-theme",
+  "files.associations": {
+    " *.js": "javascriptreact"
+  },
+  "editor.fontFamily": "Operator Mono Lig, Fira Code",
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "prettier.semi": false,
+  "breadcrumbs.enabled": false,
+  "prettier.trailingComma": "none",
+  "editor.fontSize": 13,
+  "editor.minimap.enabled": false,
+  "editor.parameterHints.enabled": false,
+  "files.exclude": {
+    "**/.git": false
+  },
+  "explorer.compactFolders": false,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.zoomLevel": 0,
+  "prettier.arrowParens": "avoid"
 }
