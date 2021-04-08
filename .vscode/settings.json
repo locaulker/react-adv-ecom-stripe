@@ -23,6 +23,8 @@
   "window.zoomLevel": 0,
   "prettier.arrowParens": "avoid",
   "cSpell.words": [
-    "btns"
+    "btns",
+    "gridview",
+    "listview"
   ]
 }

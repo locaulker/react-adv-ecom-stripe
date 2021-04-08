@@ -64,8 +64,8 @@ const SingleProductPage = () => {
           Back to Products
         </Link>
         <div className="product-center">
+          <ProductImages images={images} />
           <section className="content">
-            <ProductImages images={images} />
             <h2>{name}</h2>
             <Stars stars={stars} reviews={reviews} />
             <h5 className="price">{formatPrice(price)}</h5>
@@ -99,7 +99,7 @@ const Wrapper = styled.main`
   }
   h2 {
     text-transform: capitalize;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 20px;
   }
   .price {
