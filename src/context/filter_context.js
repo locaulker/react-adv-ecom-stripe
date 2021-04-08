@@ -25,10 +25,13 @@ export const FilterProvider = ({ children }) => {
   const { products } = useProductsContext()
   const [state, dispatch] = useReducer(reducer, initialState)
 
-  // dispatch actions
   useEffect(() => {
     dispatch({ type: LOAD_PRODUCTS, payload: products })
   }, [products])
+
+  useEffect(() => {
+    dispatch({ type: SORT_PRODUCTS })
+  }, [products, state.sort])
 
   const setGridView = () => {
     dispatch({ type: SET_GRIDVIEW })
