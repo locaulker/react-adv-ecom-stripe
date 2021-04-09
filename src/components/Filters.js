@@ -30,9 +30,9 @@ const Filters = () => {
             <input
               type="text"
               name="text"
-              placeholder="Search"
+              placeholder="search"
               className="search-input"
-              value="text"
+              value={text}
               onChange={updateFilters}
             />
           </div>
