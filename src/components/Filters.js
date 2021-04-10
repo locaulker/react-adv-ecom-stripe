@@ -44,7 +44,7 @@ const Filters = () => {
 
           {/* start categories */}
           <div className="form-control">
-            <h5>CATEGORY</h5>
+            <h5>Category</h5>
             <div>
               {categories.map((c, index) => {
                 return (
@@ -67,7 +67,7 @@ const Filters = () => {
 
           {/* start companies */}
           <div className="form-control">
-            <h5>COMPANY</h5>
+            <h5>Company</h5>
             <select
               name="company"
               value={company}
@@ -87,7 +87,7 @@ const Filters = () => {
 
           {/* start colors */}
           <div className="form-control">
-            <h5>COLORS</h5>
+            <h5>Colors</h5>
             <div className="colors">
               {colors.map((c, index) => {
                 if (c === "all") {
@@ -123,7 +123,38 @@ const Filters = () => {
             </div>
           </div>
           {/* end colors */}
+
+          {/* start prices */}
+          <div className="form-control">
+            <h5>Price</h5>
+            <p className="price">{formatPrice(price)}</p>
+            <input
+              type="range"
+              name="price"
+              onChange={updateFilters}
+              min={min_price}
+              max={max_price}
+              value={price}
+            />
+          </div>
+          {/* end prices */}
+
+          {/* start shipping */}
+          <div className="form-control shipping">
+            <label htmlFor="shipping">Free Shipping</label>
+            <input
+              type="checkbox"
+              name="shipping"
+              id="shipping"
+              onChange={updateFilters}
+              checked={shipping}
+            />
+          </div>
+          {/* end shipping */}
         </form>
+        <button type="button" className="clear-btn" onClick={clearFilters}>
+          CLEAR Filters
+        </button>
       </div>
     </Wrapper>
   )
@@ -134,6 +165,8 @@ const Wrapper = styled.section`
     margin-bottom: 1.25rem;
     h5 {
       margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      color: var(--clr-primary-3);
     }
   }
   .search-input {
@@ -218,7 +251,8 @@ const Wrapper = styled.section`
   .clear-btn {
     background: var(--clr-red-dark);
     color: var(--clr-white);
-    padding: 0.25rem 0.5rem;
+    padding: 0.75rem 0.8rem;
+    /* text-transform: uppercase; */
     border-radius: var(--radius);
   }
   @media (min-width: 768px) {
