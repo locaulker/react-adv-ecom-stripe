@@ -25,8 +25,6 @@ const Filters = () => {
   const companies = getUniqueValues(all_products, "company")
   const colors = getUniqueValues(all_products, "colors")
 
-  console.log(companies)
-
   return (
     <Wrapper>
       <div className="content">
@@ -43,6 +41,29 @@ const Filters = () => {
             />
           </div>
           {/* end search input */}
+
+          {/* start categories */}
+          <div className="form-control">
+            <h5>Category</h5>
+            <div>
+              {categories.map((c, index) => {
+                return (
+                  <button
+                    key={index}
+                    type="button"
+                    name="category"
+                    className={`${
+                      category === c.toLowerCase() ? "active" : null
+                    }`}
+                    onClick={updateFilters}
+                  >
+                    {c}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+          {/* end categories */}
         </form>
       </div>
     </Wrapper>
@@ -80,7 +101,8 @@ const Wrapper = styled.section`
     cursor: pointer;
   }
   .active {
-    border-color: var(--clr-grey-5);
+    /* border-color: var(--clr-grey-5); */
+    border-color: var(--clr-red-light);
   }
   .company {
     background: var(--clr-grey-10);
