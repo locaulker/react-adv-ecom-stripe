@@ -11,9 +11,11 @@ const CartPage = () => {
     return (
       <Wrapper className="page-100">
         <div className="empty">
-          <h2>Your Cart is Empty</h2>
+          <h2>
+            Your <strong>Cart</strong> is empty!
+          </h2>
           <Link to="/products" className="btn">
-            Add Products
+            <span>&larr; Add Products</span>
           </Link>
         </div>
       </Wrapper>
@@ -34,13 +36,21 @@ const Wrapper = styled.main`
   .empty {
     text-align: center;
     h2 {
-      margin-bottom: 1rem;
+      margin-bottom: 3rem;
       text-transform: none;
       font-weight: 300;
+    }
+    h2 strong {
+      font-weight: 400;
+      color: var(--clr-primary-5);
     }
     .btn {
       padding: 0.65rem 0.75rem;
       text-transform: capitalize;
+    }
+    .btn span {
+      font-weight: 400;
+      font-size: 1.3rem;
     }
   }
 `
