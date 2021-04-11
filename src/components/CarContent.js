@@ -1,13 +1,36 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useCartContext } from '../context/cart_context'
-import { Link } from 'react-router-dom'
-import CartColumns from './CartColumns'
-import CartItem from './CartItem'
-import CartTotals from './CartTotals'
+import React from "react"
+import styled from "styled-components"
+import { useCartContext } from "../context/cart_context"
+import { Link } from "react-router-dom"
+import CartColumns from "./CartColumns"
+import CartItem from "./CartItem"
+import CartTotals from "./CartTotals"
 
 const CartContent = () => {
-  return <h4>cart content </h4>
+  const { cart, clearCart } = useCartContext()
+
+  return (
+    <Wrapper className="section section-center">
+      <CartColumns />
+      {cart.map(item => {
+        return <CartItem key={item.id} {...item} />
+      })}
+      <hr />
+      <div className="link-container">
+        <Link to="/products" className="link-btn">
+          Continue
+        </Link>
+        <button
+          type="button"
+          className="link-btn clear-btn"
+          onClick={clearCart}
+        >
+          Clear cart
+        </button>
+      </div>
+      <CartTotals />
+    </Wrapper>
+  )
 }
 const Wrapper = styled.section`
   .link-container {
@@ -18,12 +41,12 @@ const Wrapper = styled.section`
   .link-btn {
     background: transparent;
     border-color: transparent;
-    text-transform: capitalize;
-    padding: 0.25rem 0.5rem;
+    text-transform: uppercase;
+    padding: 0.65rem 0.75rem;
     background: var(--clr-primary-5);
     color: var(--clr-white);
     border-radius: var(--radius);
-    letter-spacing: var(--spacing);
+    letter-spacing: var(--spacing-2);
     font-weight: 400;
     cursor: pointer;
   }
