@@ -63,6 +63,7 @@ const Wrapper = styled.section`
     padding: 0.65rem 0.75rem;
     letter-spacing: var(--spacing);
     font-size: 18px;
+    color: var(--clr-white);
   }
 `
 
