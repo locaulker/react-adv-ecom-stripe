@@ -101,6 +101,9 @@ const NavContainer = styled.nav`
     }
     .cart-btn-wrapper {
       display: grid;
+      .cart-btn {
+        font-size: 1.2rem;
+      }
     }
   }
 `

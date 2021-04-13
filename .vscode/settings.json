@@ -20,11 +20,12 @@
   },
   "explorer.compactFolders": false,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "window.zoomLevel": -1,
+  "window.zoomLevel": 0,
   "prettier.arrowParens": "avoid",
   "cSpell.words": [
     "btns",
     "gridview",
-    "listview"
+    "listview",
+    "localstorage"
   ]
 }
