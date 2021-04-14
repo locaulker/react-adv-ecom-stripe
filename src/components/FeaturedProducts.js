@@ -34,6 +34,9 @@ const FeaturedProducts = () => {
           return <Product key={product.id} {...product} />
         })}
       </div>
+      <Link to="/products" className="btn">
+        All Products
+      </Link>
     </Wrapper>
   )
 }
@@ -53,6 +56,7 @@ const Wrapper = styled.section`
     width: 148px;
     margin: 0 auto;
     text-align: center;
+    padding: 0.75rem 0.8rem;
   }
   @media (min-width: 576px) {
     .featured {

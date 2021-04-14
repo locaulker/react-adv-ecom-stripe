@@ -61,7 +61,7 @@ export const FilterProvider = ({ children }) => {
     if (name === "category") {
       value = e.target.textContent
     }
-    if (name == "color") {
+    if (name === "color") {
       value = e.target.dataset.color
     }
     if (name === "price") {
